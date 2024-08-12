@@ -17,7 +17,8 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                  
+                    sh ''' docker stop bslc'''
+                    sh ''' docker run bslc'''
                     sh ''' docker run -d -p 80:80 --name bslc demo-auto'''
                 }
             }
