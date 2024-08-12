@@ -17,7 +17,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    docker.image('demo-automation').run('-p 80:80')
+                    sh ''' docker run -d -p 80:80 demo-auto'''
                 }
             }
         }
