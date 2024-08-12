@@ -10,7 +10,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('demo-automation')
+                    sh '''docker build -t demo-auto .'''
                 }
             }
         }
