@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/ankitagrawal26/ansible-jenkins.git'
-            }
+                git url: 'https://github.com/ankitagrawal26/ansible-jenkins.git', tool: 'Default'
+                 }
         }
         stage('Build Docker Image') {
             steps {
